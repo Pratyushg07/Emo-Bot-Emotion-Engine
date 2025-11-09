@@ -1,4 +1,5 @@
 # nlp_pipeline.py
+
 from transformers import pipeline
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import nltk
@@ -22,7 +23,7 @@ def gemini_emotion_analysis(text: str) -> dict:
     if not text.strip():
         return {}
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel(model_name="models/gemini-2.5-flash")
 
     prompt = f"""
     Analyze the following text and return a JSON dictionary of emotions with confidence scores between 0 and 1.
