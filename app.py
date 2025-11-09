@@ -6,6 +6,7 @@ from fsm_engine import EmotionFSM
 from utils import format_prediction
 import time
 
+
 st.set_page_config(page_title="EmoMind - FSM Emotion Engine", layout="centered")
 
 st.title("EmoMind — FSM-Based Emotion Engine")
